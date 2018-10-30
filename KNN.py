@@ -34,7 +34,3 @@ plt.plot(range(1,50),error,color='blue', linestyle='dashed', marker='o',
 plt.title('Error Rate vs. K Value')
 plt.xlabel('K')
 plt.ylabel('Error Rate')
-'''
-predictLabel = fl.KNN(24, trainSet, testSet,trainLabel,col, stdmode='mix')
-err = fl.errRate(predictLabel, testLabel)
-'''
