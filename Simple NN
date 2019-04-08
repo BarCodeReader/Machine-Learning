@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr  8 19:12:48 2019
+
+@author: emp9123891
+"""
+
 import numpy as np
 import math
 
@@ -20,7 +27,7 @@ class NN:
     #calculate back propagation using cost function and gradient decent
     def BP(self):
         # application of the chain rule to find derivative of the loss function with respect to weights2 and weights1
-        sigm = lambda x: math.exp(-x)/(1+math.exp(-x))**2       
+        sigm = lambda x: x*(1-x)       
         sigmoid_derivative = np.vectorize(sigm)
         
         d_weights2 = np.dot(self.layer1.T, (2*(self.y - self.output) * sigmoid_derivative(self.output)))
@@ -37,7 +44,7 @@ y = np.array([[0],[1],[1],[0]])
 
 myNN = NN(x,y)
 
-for i in range(4000):
+for i in range(1500):
     myNN.FF()
     myNN.BP()
 print(myNN.output)
