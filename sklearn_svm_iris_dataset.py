@@ -2,7 +2,7 @@
 """
 Created on Wed May  1 19:24:41 2019
 
-@author: emp9123891
+@author: Mike
 """
 
 #SVM
